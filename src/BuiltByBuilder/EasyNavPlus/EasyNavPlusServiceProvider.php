@@ -4,7 +4,7 @@ namespace BuiltByBuilder\EasyNavPlus;
 
 use Illuminate\Support\ServiceProvider;
 
-class EasyNavServiceProvider extends ServiceProvider
+class EasyNavPlusServiceProvider extends ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
