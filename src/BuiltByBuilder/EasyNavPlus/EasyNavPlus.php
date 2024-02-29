@@ -27,6 +27,12 @@ class EasyNavPlus
 	 */
 	protected $previous;
 
+	/**
+	 * The active class.
+	 *
+	 * @var string|null
+	 */
+	protected $active;
 
 	/**
 	 * Construct a new EasyNavPlus instance
