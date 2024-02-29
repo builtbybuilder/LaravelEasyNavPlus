@@ -1,10 +1,10 @@
 # Contribution Guidelines
 
-Thank you for your interest in contributing to **Laravel EasyNav**! Together we can build an even better package for the whole community.
+Thank you for your interest in contributing to **Laravel EasyNavPlus**! Together we can build an even better package for the whole community.
 
 ## Use GitHub issues
 
-If you experience a bug or error please submit a GitHub issue by going here: https://github.com/DevMarketer/LaravelEasyNav/issues
+If you experience a bug or error please submit a GitHub issue by going here: https://github.com/builtbybuilder/LaravelEasyNavPlus/issues
 
 The issues are generally handled immediately and will receive a label as appropriate (such as "Bug", "New Feature", "Improvement", or "Out of Scope"). If you wish to fix the problem or add the feature yourself, please mention that in the issue so that a moderator can mark the issue as responsible by you and you can begin work towards submitting a PR (Pull Request).
 
@@ -22,7 +22,7 @@ Note that the _Master_ branch is considered stable at all times and is safe to u
 
 ## Roadmap
 
-To see all the upcoming features planned for this project please visit Roadmap on the projects tab: https://github.com/DevMarketer/LaravelEasyNav/projects/1
+To see all the upcoming features planned for this project please visit Roadmap on the projects tab: https://github.com/builtbybuilder/LaravelEasyNavPlus/projects/1
 
 Here you can click through any of the cards and see the issues that these cards represent. On the issues you are welcome to discuss the feature/bug/improvement to your hearts content and I encourage you to do so.
 
@@ -32,4 +32,4 @@ Please fill free to contribute in any way that you feel you can. Even adding iss
 
 #### Contact
 
-If you want to reach out to the Maintainer of this package, please email me at hello@jacurtis.com or follow me/ mention me on Twitter: https://twitter.com/_jacurtis
+If you want to reach out to the Maintainer of this package, please email me at support@builtbybuilder.com or follow me/ mention me on Twitter: https://twitter.com/@builtbybuilder

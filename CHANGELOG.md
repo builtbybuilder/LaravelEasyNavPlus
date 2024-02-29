@@ -8,14 +8,14 @@ All features, bug fixes, and changes in the code base will be updated and docume
 
 **Fixes:**
 
-1. (1.0.4) - Default active class is now "active" instead of "is-active". This now matches the default used by bootstrap framework and matches the statements made in the Readme documentation. [Issue \#3](https://github.com/DevMarketer/LaravelEasyNav/issues/3)
+1. (1.0.4) - Default active class is now "active" instead of "is-active". This now matches the default used by bootstrap framework and matches the statements made in the Readme documentation. [Issue \#3](https://github.com/BuiltByBuilder/LaravelEasyNavPlus/issues/3)
 1. (1.0.3) - Removed problematic feature allowing you to selectively enable helper functions. This will be removed until I can find a better way to do it.
 1. (1.0.2) - Fixed typos in config files
 1. (1.0.1) - Merge config files so that users do not have to export the config if they do not want to.
 
 ##### 1.0.0
 
-This update was focused on the core of EasyNav package. This builds out the basic functions of EasyNav and how it works. It provides a basic facade to access various helpful functions focused around returning a specified class name based on the current page the user is on.
+This update was focused on the core of EasyNavPlus package. This builds out the basic functions of EasyNavPlus and how it works. It provides a basic facade to access various helpful functions focused around returning a specified class name based on the current page the user is on.
 
 This allows a developer to set rules in their navigation partials and then never worry about navigation again.
 
@@ -32,4 +32,4 @@ This update includes the basic structure of the package, includes helper functio
 	1. `navHasSegment()` - shortcut of `Nav::hasSegment()`
 	1. `navIsRoute()` - shortcut of `Nav::isRoute()`
 	1. `navIsResource()` - shortcut of `Nav::isResource`
-1. Publishable config file available with the `-tag=easynav`
+1. Publishable config file available with the `-tag=easynavplus`

@@ -1,17 +1,17 @@
 {
-    "name": "devmarketer/easynav",
+    "name": "builtbybuilder/easynavplus",
     "description": "Making managing navigation in Laravel easy.",
-    "keywords": ["nav", "easy", "laravel", "easynav", "helpers", "active"],
+    "keywords": ["nav", "easy", "laravel", "easynavplus", "helpers", "active", "builtbybuilder"],
     "license": "MIT",
-    "homepage": "https://github.com/DevMarketer/LaravelEasyNav",
+    "homepage": "https://github.com/builtbybuilder/LaravelEasyNavPlus",
     "support": {
-        "issues": "https://github.com/DevMarketer/LaravelEasyNav/issues",
-        "source": "https://github.com/DevMarketer/LaravelEasyNav"
+        "issues": "https://github.com/builtbybuilder/LaravelEasyNavPlus/issues",
+        "source": "https://github.com/builtbybuilder/LaravelEasyNavPlus"
     },
     "authors": [
         {
-            "name": "J. Alexander Curtis",
-            "email": "jalexandercurtis@gmail.com"
+            "name": "BuiltByBuilder",
+            "email": "support@builtbybuilder.com"
         }
     ],
     "require": {
@@ -23,19 +23,19 @@
     },
     "autoload": {
         "psr-0": {
-            "DevMarketer\\EasyNav": "src/"
+            "BuiltByBuilder\\EasyNavPlus": "src/"
         },
         "files": [
-            "src/DevMarketer/EasyNav/functions.php"
+            "src/BuiltByBuilder/EasyNavPlus/functions.php"
         ]
     },
     "extra": {
         "laravel": {
             "providers": [
-                "DevMarketer\\EasyNav\\EasyNavServiceProvider"
+                "BuiltByBuilder\\EasyNavPlus\\EasyNavPlusServiceProvider"
             ],
             "aliases": {
-                "Nav": "DevMarketer\\EasyNav\\EasyNavFacade"
+                "Nav": "BuiltByBuilder\\EasyNavPlus\\EasyNavPlusFacade"
             }
         }
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace DevMarketer\EasyNav;
+namespace BuiltByBuilder\EasyNavPlus;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -22,8 +22,8 @@ class EasyNavServiceProvider extends ServiceProvider
     public function boot()
     {
       $this->publishes([
-        __DIR__.'/../../config/easynav.php' => config_path('easynav.php'),
-      ], 'easynav');
+        __DIR__.'/../../config/easynavplus.php' => config_path('easynavplus.php'),
+      ], 'easynavplus');
     }
 
     /**
@@ -34,11 +34,11 @@ class EasyNavServiceProvider extends ServiceProvider
     public function register()
     {
 			$this->mergeConfigFrom(
-        __DIR__.'/../../config/easynav.php', 'easynav'
+        __DIR__.'/../../config/easynavplus.php', 'easynavplus'
 	    );
-      $this->app->bind('easynav', function($app)
+      $this->app->bind('easynavplus', function($app)
       {
-        return $this->app->make('DevMarketer\EasyNav\EasyNav');
+        return $this->app->make('BuiltByBuilder\EasyNavPlus\EasyNavPlus');
       });
     }
 }

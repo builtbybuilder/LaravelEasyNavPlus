@@ -1,4 +1,4 @@
-# Laravel EasyNav: Easy Navigation Tools for Laravel
+# Laravel EasyNavPlus: Easy Navigation Tools for Laravel
 
 Every time I build another Laravel app, I find myself re-using the same custom Navigation helpers I have been perfecting over the years. These tools allow you to accurately and concisely change the class on navigation elements depending on the current page. Tools like these allow you to have your navigation manage itself, speeding up the development progress, but with the efficiency for long term production use.
 
@@ -11,7 +11,7 @@ Installation is straightforward, setup is similar to every other Laravel Package
 Begin by pulling in the package through Composer:
 
 ```
-composer require devmarketer/easynav
+composer require builtbybuilder/easynavplus
 ```
 
 #### 2. Define the Service Provider and alias
@@ -26,7 +26,7 @@ If you are using Laravel 5.0 - 5.4 then you need to add a provider and alias. In
 'providers' => [
 	//  other providers
 
-	DevMarketer\EasyNav\EasyNavServiceProvider::class,
+	BuiltByBuilder\EasyNavPlus\EasyNavPlusServiceProvider::class,
 ];
 ```
 
@@ -36,7 +36,7 @@ Then we want to define an alias in the same `config/app.php` file.
 'aliases' => [
 	// other aliases
 
-	'Nav' => DevMarketer\EasyNav\EasyNavFacade::class,
+	'Nav' => BuiltByBuilder\EasyNavPlus\EasyNavPlusFacade::class,
 ];
 ```
 
@@ -47,10 +47,10 @@ The config file allows you to override default settings of this package to meet 
 To generate a config file type this command into your terminal:
 
 ```
-php artisan vendor:publish --tag=easynav
+php artisan vendor:publish --tag=easynavplus
 ```
 
-This generates a config file at `config/easynav.php`.
+This generates a config file at `config/easynavplus.php`.
 
 ## Usage
 
@@ -146,20 +146,20 @@ This defaults to the value defined under `default_class` in your config file or 
 **Example:**
 
 ```
-Current Url - https://domain.com/posts/created-by/devmarketer
+Current Url - https://domain.com/posts/created-by/builtbybuilder
 ---
 
 {{ Nav::hasSegment('posts') }} 																// returns "active" [1]
 {{ Nav::hasSegment('posts', 2) }} 														// returns "" [2]
-{{ Nav::hasSegment('devmarketer', [2,3], 'is-active') }} 			// returns "active" [3]
-{{ Nav::hasSegment(['devmarketer', 'jacurtis'], [2,3]) }} 		// returns "active" [4]
+{{ Nav::hasSegment('builtbybuilder', [2,3], 'is-active') }} 			// returns "active" [3]
+{{ Nav::hasSegment(['builtbybuilder', 'jacurtis'], [2,3]) }} 		// returns "active" [4]
 {{ Nav::hasSegment('posts', [2,3]) }} 												// returns "" [5]
 ```
 
 (1) "posts" is in the first segment (the default segment) so it returns the default active class  
 (2) "posts" is not in the second segment so it returns nothing  
-(3) checks if "devmarketer" is in the second OR third segments. It is in the 3rd segment, so it returns the active class provided, "is-active"  
-(4) check if "devmarketer" or "jacurtis" are in either the 2nd or 3rd segments. "devmarketer" is in 3rd segment, so returns default active class  
+(3) checks if "builtbybuilder" is in the second OR third segments. It is in the 3rd segment, so it returns the active class provided, "is-active"  
+(4) check if "builtbybuilder" or "jacurtis" are in either the 2nd or 3rd segments. "builtbybuilder" is in 3rd segment, so returns default active class  
 (5) checks for "posts" in second or third segments, returns nothing.
 
 **Example 2:**
@@ -275,27 +275,27 @@ If set to **TRUE**, strict mode will be enabled, requiring that the search from 
 **Example:**
 
 ```
-Current Url - https://domain.com/about/devmarketer/edit
+Current Url - https://domain.com/about/builtbybuilder/edit
 ---
 
 {{ Nav::hasSegment('about') }}																// returns "active" [1]
 {{ Nav::hasSegment('devm', 'open') }}													// returns "open" [2]
-{{ Nav::hasSegment('devmarketer', 'active', TRUE) }} 					// returns "" [3]
-{{ Nav::hasSegment('about/devmarketer', NULL, TRUE) }} 				// returns "active" [4]
+{{ Nav::hasSegment('builtbybuilder', 'active', TRUE) }} 					// returns "" [3]
+{{ Nav::hasSegment('about/builtbybuilder', NULL, TRUE) }} 				// returns "active" [4]
 {{ Nav::hasSegment('about', NULL, TRUE) }}										// returns "" [5]
 ```
 
 (1) "about" is contained in the URL, so returns as active  
 (2) "devm" is contained in the URL (even though its not a full segment). Be careful with this, as it can cause false positives if you are not careful. The active class provided is "open" so that is what is returned.  
-(3) "devmarketer" is in the URL, but _STRICT MODE_ is also active and because the search term does not begin at the start of the path, it will return as inactive.  
-(4) returns as active because _STRICT MODE_ is true, and "about/devmarketer" is at the start of the path even though the URL extends past the search term.  
+(3) "builtbybuilder" is in the URL, but _STRICT MODE_ is also active and because the search term does not begin at the start of the path, it will return as inactive.  
+(4) returns as active because _STRICT MODE_ is true, and "about/builtbybuilder" is at the start of the path even though the URL extends past the search term.  
 (5) returns as active because "about" is contained in the url and with _STRICT MODE_ enabled, it still checks out because "about" is found at the start of the the url.
 
 ### Helper Functions
 
 In addition to the `Nav::method()` facade that we learned about, there are some helper functions you can use if you prefer to use helper functions.
 
-You can disable the helper functions if you do not want to load them, by changing the `enable_helper_functions` setting to `FALSE` in the `config/easynav.php` file.
+You can disable the helper functions if you do not want to load them, by changing the `enable_helper_functions` setting to `FALSE` in the `config/easynavplus.php` file.
 
 #### `navHasSegment($slugs, $segments, $activeClass)`
 
@@ -323,6 +323,6 @@ I encourage you to contribute to this package to improve it and make it better. 
 
 I would love to hear from you. I run the DevMarketer channel on YouTube, where we discuss how to _"Build and Grow Your Next Great Idea"_ please subscribe and check out the videos.
 
-I am always on Twitter, and it is a great way to communicate with me or follow me. [Check me out on Twitter](https://twitter.com/_jacurtis).
+I am always on Twitter, and it is a great way to communicate with me or follow me. [Check me out on Twitter](https://twitter.com/@builtbybuilder).
 
 You can also email me at hello@jacurtis.com for any other requests.

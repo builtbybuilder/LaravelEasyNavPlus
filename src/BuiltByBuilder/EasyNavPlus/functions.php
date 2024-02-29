@@ -9,8 +9,8 @@ if (! function_exists('navHasSegment')) {
    */
   function navHasSegment($slugs, $segments = 1, $active = NULL)
   {
-      $easynav = app('easynav');
-      return $easynav->hasSegment($slugs, $segments, $active);
+      $easynavplus = app('easynavplus');
+      return $easynavplus->hasSegment($slugs, $segments, $active);
   }
 }
 
@@ -25,8 +25,8 @@ if (! function_exists('navIsRoute')) {
 	 */
 	function navIsRoute($route, $active = null)
 		{
-			$easynav = app('easynav');
-				return $easynav->isRoute($route, $active);
+			$easynavplus = app('easynavplus');
+				return $easynavplus->isRoute($route, $active);
 		}
 }
 
@@ -43,7 +43,7 @@ if (! function_exists('navIsResource')) {
 	 */
 	function navIsResource($resource, $prefix = NULL, $active = NULL, $strict = false)
 	{
-			$easynav = app('easynav');
-			return $easynav->isResource($resource, $prefix, $active, $strict);
+			$easynavplus = app('easynavplus');
+			return $easynavplus->isResource($resource, $prefix, $active, $strict);
 	}
 }

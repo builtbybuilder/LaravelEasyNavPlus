@@ -1,24 +1,24 @@
 <?php
 
-namespace DevMarketer\EasyNav;
+namespace BuiltByBuilder\EasyNavPlus;
 
 use Illuminate\Http\Request;
 
-class EasyNav
+class EasyNavPlus
 {
 	/**
-   * The Request store.
-   *
-   * @var Illuminate\Http\Request
-   */
-  protected $request;
+	 * The Request store.
+	 *
+	 * @var Illuminate\Http\Request
+	 */
+	protected $request;
 
 	/**
-   * Used to detect chaining.
-   *
-   * @var bool
-   */
-  protected $or;
+	 * Used to detect chaining.
+	 *
+	 * @var bool
+	 */
+	protected $or;
 
 	/**
 	 * Stores previous value if chaining.
@@ -29,7 +29,7 @@ class EasyNav
 
 
 	/**
-	 * Construct a new EasyNav instance
+	 * Construct a new EasyNavPlus instance
 	 *
 	 * @param Illuminate\Http\Request 		$request
 	 */
@@ -45,26 +45,26 @@ class EasyNav
 	}
 
 	/**
-   * returns the active class if the defined segment exists
+	 * returns the active class if the defined segment exists
 	 *  in the current request URI
-   *
-   * @param		string|array 	$slugs
+	 *
+	 * @param		string|array 	$slugs
 	 * @param		int|array			$segments
 	 * @param		string|NULL		$active
-   * @return	string
-   */
-  public function hasSegment($slugs, $segments = 1, $active = NULL)
-  {
+	 * @return	string
+	 */
+	public function hasSegment($slugs, $segments = 1, $active = NULL)
+	{
 		$this->setActive($active);
-    $segments = (!is_array($segments) ? [$segments] : $segments);
-    $slugs = (!is_array($slugs) ? [$slugs] : $slugs);
+		$segments = (!is_array($segments) ? [$segments] : $segments);
+		$slugs = (!is_array($slugs) ? [$slugs] : $slugs);
 		foreach ($slugs as $slug) {
-      foreach ($segments as $segment) {
-        if ($this->request->segment($segment) == $slug) return $this->active;
-      }
+			foreach ($segments as $segment) {
+				if ($this->request->segment($segment) == $slug) return $this->active;
+			}
 		}
-	  return '';
-  }
+		return '';
+	}
 
 	/**
 	 * Alias to $this->hasSegment()
@@ -80,7 +80,7 @@ class EasyNav
 	}
 
 	/**
- 	 * Receives a named route and returns true or false depending
+	 * Receives a named route and returns true or false depending
 	 *  if the current URL is equal to the named route provided.
 	 *
 	 * @param 	string				$route
@@ -94,7 +94,7 @@ class EasyNav
 	}
 
 	/**
- 	 * Checks if current page is one of a specified resouce
+	 * Checks if current page is one of a specified resouce
 	 *  provided in the function. Also accepts a prefix or strict
 	 *  mode to optionally prevent false-positives
 	 *
@@ -109,7 +109,7 @@ class EasyNav
 		$this->setActive($active);
 		if ($prefix && is_string($prefix)) {
 			$prefix = str_replace('.', '/', $prefix);
-			$search = trim($prefix,'/').'/'.trim($resource, '/');
+			$search = trim($prefix, '/') . '/' . trim($resource, '/');
 		} else {
 			$search = trim($resource, '/');
 		}
@@ -169,7 +169,7 @@ class EasyNav
 	}
 
 	/**
- 	 * Sets the active class to the value in the config file if
+	 * Sets the active class to the value in the config file if
 	 *  no value is passed with the function.
 	 *
 	 * @param 	string|NULL		$active
@@ -180,7 +180,7 @@ class EasyNav
 		if ($active) {
 			return $this->active = $active;
 		} else {
-			return $this->active = config('easynav.default_class');
+			return $this->active = config('easynavplus.default_class');
 		}
 	}
 }

@@ -1,16 +1,16 @@
 <?php
-namespace DevMarketer\EasyNav;
+namespace BuiltByBuilder\EasyNavPlus;
 /**
- * This file is part of EasyNav,
+ * This file is part of EasyNavPlus,
  * Easy navigation tools for Laravel.
  *
  * @license MIT
- * @package EasyNav
+ * @package EasyNavPlus
  */
 
 use Illuminate\Support\Facades\Facade;
 
-class EasyNavFacade extends Facade
+class EasyNavPlusFacade extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -19,6 +19,6 @@ class EasyNavFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'easynav';
+        return 'easynavplus';
     }
 }

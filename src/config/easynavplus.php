@@ -1,10 +1,10 @@
 <?php
 /**
- * This file is part of Laravel EasyNav,
+ * This file is part of Laravel EasyNavPlus,
  * a powerful and flexible flash notifications system.
  *
  * @license MIT
- * @package Laravel EasyNav
+ * @package Laravel EasyNavPlus
  */
 return [
     /*
