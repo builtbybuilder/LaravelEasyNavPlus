@@ -4,14 +4,11 @@ All features, bug fixes, and changes in the code base will be updated and docume
 
 ## Version 1: Official Release
 
-##### 1.0.1 - 1.0.3
+##### 1.0.1
 
 **Fixes:**
 
-1. (1.0.4) - Default active class is now "active" instead of "is-active". This now matches the default used by bootstrap framework and matches the statements made in the Readme documentation. [Issue \#3](https://github.com/BuiltByBuilder/LaravelEasyNavPlus/issues/3)
-1. (1.0.3) - Removed problematic feature allowing you to selectively enable helper functions. This will be removed until I can find a better way to do it.
-1. (1.0.2) - Fixed typos in config files
-1. (1.0.1) - Merge config files so that users do not have to export the config if they do not want to.
+1. Fix dynamic var warning in php 8.*
 
 ##### 1.0.0
 
